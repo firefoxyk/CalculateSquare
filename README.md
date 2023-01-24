@@ -8,7 +8,7 @@
 Задание2:
 В базе данных MS SQL Server есть продукты и категории. Одному продукту может соответствовать много категорий, в одной категории может быть много продуктов. Напишите SQL запрос для выбора всех пар «Имя продукта – Имя категории». Если у продукта нет категорий, то его имя все равно должно выводиться.
 
-SELECT Products.name as 'Имя продукта', Category.name as 'Имя категории'
-FROM Products 
-LEFT JOIN  Category ON Products.id=Category.productId 
-ORDER BY Products.name;
+SELECT prod.name as 'Имя продукта', cat.name as 'Имя категории' 
+FROM Products prod
+    LEFT FOIN ProdCat prodcat ON prod.id = prodcat.products
+    INNER JOIN Category cat ON cat.id = prodcat.category
